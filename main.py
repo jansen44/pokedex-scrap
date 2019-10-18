@@ -21,10 +21,8 @@ if __name__ == '__main__':
     f = open(FILE_NAME, "x")
     f = open(FILE_NAME, "w")
 
-    poke_page_url = FIRST_URL
-    print (poke_page_url)
-    poke_soup     = get_poke_soup(poke_page_url)
-
+    poke_soup     = get_poke_soup(FIRST_URL)
+    
     while(True):
         poke_info = get_poke_info(poke_soup)
         message   = get_formatted_message(poke_info)
