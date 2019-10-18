@@ -1,0 +1,633 @@
+<!--
+
+div["id"] = "mw-content-text"
+    |> table[0].tr[1].td[2].table.tr.td[2].a                        => next_pokemon_link
+    |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[0].big.text  => name
+    |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[0].a.text    => category
+    |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[1].span      => jp/name
+    |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[1].i         => jp/name/romaji
+
+-->
+
+<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+    <!-- |> table[0] -->
+    <table>
+
+        <!-- |> table[0].tr[0] -->
+        <tr></tr>
+
+        <!-- |> table[0].tr[1]  -->
+        <tr>
+
+            <!-- |> table[0].tr[1].td[0]  -->
+            <td></td>
+
+            <!-- |> table[0].tr[1].td[1]  -->
+            <td></td>
+
+            <!-- |> table[0].tr[1].td[2]  -->
+            <td>
+
+                <!-- |> table[0].tr[1].td[2].table -->
+                <table>
+
+                    <!-- |> table[0].tr[1].td[2].table.tr -->
+                    <tr>
+
+                        <!-- |> table[0].tr[1].td[2].table.tr.td[0] -->
+                        <td></td>
+
+                        <!-- |> table[0].tr[1].td[2].table.tr.td[1]  -->
+                        <td></td>
+
+                        <!-- |> table[0].tr[1].td[2].table.tr.td[2] -->
+                        <td>
+                            |> table[0].tr[1].td[2].table.tr.td[2].a => next_pokemon_link
+                            <a href="/wiki/Ivysaur_(Pok%C3%A9mon)" title="Ivysaur (Pokémon)">
+                                <span style="color:#000;">&#8594;</span>
+                            </a>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+
+        |> table[0].tr[2] => lixo
+        <tr></tr>
+
+    </table>
+
+    |> table[1]. 
+    <table class="roundy"
+        style="float:right; text-align:center; width:33%; max-width:420px; background: #78C850; border: 2px solid #682A68; padding:2px;">
+
+        <!-- |> table[1].tr[0] => name, category, jp/name, index -->
+        <tr>
+
+            <!-- |> table[1].tr[0].td -->
+            <td colspan="2">
+
+                <!-- |> table[1].tr[0].td.table -->
+                <table width="100%" class="roundy" style="background:#A7DB8D; padding:2px; border-spacing:3px;">
+
+                    <!-- |> table[1].tr[0].td.table.tr[0] -->
+                    <tr>
+                        <!-- |> table[1].tr[0].td.table.tr[0].td[0] -->
+                        <td width="75%" class="roundy" style="background:#FFF;">
+                            
+                            <!-- |> table[1].tr[0].td.table.tr[0].td[0].table -->
+                            <table width="100%" style="background:none;">
+                                
+                                <!-- |> table[1].tr[0].td.table.tr[0].td[0].table.tr -->
+                                <tr>
+                                    
+                                    <!-- |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[0] -->
+                                    <td width="50%">
+                                        
+                                        |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[0].big.text => name
+                                        <big>
+                                            <big>
+                                                <b>Bulbasaur</b>
+                                            </big>
+                                        </big>
+
+                                        <br />
+                                        
+                                        |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[0].a.text => category
+                                        <a href="/wiki/Pok%C3%A9mon_category" title="Pokémon category">
+                                            <span style="color:#000;">Seed Pokémon</span>
+                                        </a>
+                                    </td>
+                                    
+                                    <!-- |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[1] -->
+                                    <td> 
+                                        |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[1].span => jp/name
+                                        <span lang="ja"><b>フシギダネ</b></span>
+                                        
+                                        <br />
+                                        
+                                        |> table[1].tr[0].td.table.tr[0].td[0].table.tr.td[1].i => jp/name/romaji
+                                        <i>Fushigidane</i>
+                                    </td>
+                                </tr>
+                            
+                            </table>
+
+                        </td>
+                        
+                        |> table[1].tr[0].td.table.tr[0].th.text => index
+                        <th width="25%" class="roundy" style="background:#FFF;">
+                            <big>
+                                <big>
+                                    <a href="/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number" title="List of Pokémon by National Pokédex number">
+                                        <span style="color:#000;">#001</span>
+                                    </a>
+                                </big>
+                            </big>
+                        </th>
+
+                    </tr>
+
+                    <!-- |> {{ Imagem }} -->
+                    <tr>
+                        <td colspan="2">
+                            <table width="100%" class="roundy" style="background:#FFF;">
+                                <tr>
+                                    <td colspan="4"> <a href="/wiki/File:001Bulbasaur.png" class="image"
+                                            title="Bulbasaur"><img alt="Bulbasaur"
+                                                src="//cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png"
+                                                width="250" height="250"
+                                                srcset="//cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/375px-001Bulbasaur.png 1.5x, //cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/500px-001Bulbasaur.png 2x" /></a>
+                                    </td>
+                                </tr>
+                                <tr style="display:none;">
+                                    <td colspan="1">
+                                    </td>
+                                    <td colspan="2" style="display:none;">
+                                    </td>
+                                    <td colspan="1" style="display:none;">
+                                    </td>
+                                </tr>
+                                <tr style="display:none;">
+                                    <td colspan="2" style="display:none;">
+                                        <br /><small></small>
+                                    </td>
+                                    <td colspan="2"> <br /><small></small>
+                                    </td>
+                                    <td colspan="2" style="display:none;">
+                                        <br /><small></small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"> <a href="https://archives.bulbagarden.net/wiki/Category:Bulbasaur"
+                                            class="extiw" title="a:Category:Bulbasaur">Images on the
+                                            Bulbagarden Archives</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+
+        </tr>
+
+        |> tr[1] => types
+        <tr>
+            <td class="roundy" colspan="2" style="background:#A7DB8D; padding:2px;"> <b><a href="/wiki/Type"
+                        title="Type"><span style="color:#000;">Type</span></a></b>
+                <table class="roundy" width="100%" style="background: #FFF; padding-top: 3px;">
+                    <tr>
+                        <td>
+                            <table style="margin:auto; background:none;">
+                                <tr>
+                                    <td width="45px"
+                                        style="font-size: 85%; line-height:12px; background: #78C850; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Grass_(type)" title="Grass (type)"><span
+                                                style="color:#FFF;"><b>Grass</b></span></a>
+                                    </td>
+                                    <td width="45px"
+                                        style="font-size: 85%; line-height:12px; background: #A040A0; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Poison_(type)" title="Poison (type)"><span
+                                                style="color:#FFF;"><b>Poison</b></span></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="display: none; width:50%;">
+                            <table style="margin:auto; background:none;">
+                                <tr>
+                                    <td width="45px"
+                                        style="font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                    <td width="45px"
+                                        style="display: none; font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                </tr>
+                            </table><small></small>
+                        </td>
+                        <td style="display: none;">
+                            <table style="margin:auto; background:none;">
+                                <tr>
+                                    <td width="45px"
+                                        style="font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                    <td width="45px"
+                                        style="display: none; font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                </tr>
+                            </table><small></small>
+                        </td>
+                        <td style="display: none;">
+                            <table style="margin:auto; background:none;">
+                                <tr>
+                                    <td width="45px"
+                                        style="font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                    <td width="45px"
+                                        style="display: none; font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                </tr>
+                            </table><small></small>
+                        </td>
+                        <td style="display: none;">
+                            <table style="margin:auto; background:none;">
+                                <tr>
+                                    <td width="45px"
+                                        style="font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                    <td width="45px"
+                                        style="display: none; font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                </tr>
+                            </table><small></small>
+                        </td>
+                        <td style="display: none;">
+                            <table style="margin:auto; background:none;">
+                                <tr>
+                                    <td width="45px"
+                                        style="font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                    <td width="45px"
+                                        style="display: none; font-size: 85%; line-height:12px; background: #68A090; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -icab-border-radius: 2px; -o-border-radius: 2px;">
+                                        <a href="/wiki/Unknown_(type)" class="mw-redirect" title="Unknown (type)"><span
+                                                style="color:#FFF;"><b>Unknown</b></span></a>
+                                    </td>
+                                </tr>
+                            </table><small></small>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        |> tr[2] => abilities
+        <tr>
+            <td class="roundy" colspan="2" style="background:#A7DB8D;"> <b><a href="/wiki/Ability" title="Ability"><span
+                            style="color:#000;">Abilities</span></a></b>
+                <table class="roundy" width="100%" style="background:#FFF;">
+                    <tr>
+                        <td width="50%"> <a href="/wiki/Overgrow_(Ability)" title="Overgrow (Ability)"><span
+                                    style="color:#000;">Overgrow</span></a>
+                        </td>
+                        <td width="50%" style="display: none"> <a href="/wiki/Cacophony_(Ability)"
+                                title="Cacophony (Ability)"><span
+                                    style="color:#000;">Cacophony</span></a><br /><small></small>
+                        </td>
+                        <td width="50%" colspan="1" style="display: none"> <a href="/wiki/Cacophony_(Ability)"
+                                title="Cacophony (Ability)"><span
+                                    style="color:#000;">Cacophony</span></a><br /><small></small>
+                        </td>
+                        <td width="50%" colspan="1"> <a href="/wiki/Chlorophyll_(Ability)"
+                                title="Chlorophyll (Ability)"><span
+                                    style="color:#000;">Chlorophyll</span></a><br /><small>
+                                Hidden Ability</small>
+                        </td>
+                        <td width="50%" style="display: none"> <a href="/wiki/Cacophony_(Ability)"
+                                title="Cacophony (Ability)"><span style="color:#000;">Cacophony</span></a><br /><small>
+                                Hidden Ability</small>
+                        </td>
+                        <td width="50%" colspan="1" style="display: none"> <a href="/wiki/Cacophony_(Ability)"
+                                title="Cacophony (Ability)"><span
+                                    style="color:#000;">Cacophony</span></a><br /><small></small>
+                        </td>
+                        <td width="50%" style="display: none"> <a href="/wiki/Cacophony_(Ability)"
+                                title="Cacophony (Ability)"><span
+                                    style="color:#000;">Cacophony</span></a><br /><small></small>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        |> tr[3] => gender ratio, catch rate
+        <tr>
+            <td width="50%" class="roundy" style="background:#A7DB8D;"> <b><a
+                        href="/wiki/List_of_Pok%C3%A9mon_by_gender_ratio" title="List of Pokémon by gender ratio"><span
+                            style="color:#000;">Gender ratio</span></a></b>
+                <table class="roundy" width="100%" style="background:#FFF;">
+                    <tr>
+                        <td style="display:none;"> <a href="/wiki/Category:Pok%C3%A9mon_with_unknown_gender_ratios"
+                                title="Category:Pokémon with unknown gender ratios"><span
+                                    style="color:#000;">Unknown</span></a>
+                        </td>
+                        <td style="">
+                            <div class="statbar"
+                                style="float:left;background:#3355FF; border-top-left-radius: 20px; -moz-border-radius-topleft: 20px; -webkit-border-top-left-radius: 20px; -khtml-border-top-left-radius: 20px; -icab-border-top-left-radius: 20px; -o-border-top-left-radius: 20px; border-bottom-left-radius: 20px; -moz-border-radius-bottomleft: 20px; -webkit-border-bottom-left-radius: 20px; -khtml-border-bottom-left-radius: 20px; -icab-border-bottom-left-radius: 20px; -o-border-bottom-left-radius: 20px; color:#FFF; height:10px; width:86%; border: 0.5px solid black; border-right-width:0px; overflow: hidden;">
+                            </div>
+                            <div class="statbar"
+                                style="float:left;background:#FF77DD; border-top-right-radius: 20px; -moz-border-radius-topright: 20px; -webkit-border-top-right-radius: 20px; -khtml-border-top-right-radius: 20px; -icab-border-top-right-radius: 20px; -o-border-top-right-radius: 20px; border-bottom-right-radius: 20px; -moz-border-radius-bottomright: 20px; -webkit-border-bottom-right-radius: 20px; -khtml-border-bottom-right-radius: 20px; -icab-border-bottom-right-radius: 20px; -o-border-bottom-right-radius: 20px; color:#000; height:10px; width:11%; border: 0.5px solid black; overflow: hidden; border-left-width:0px;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="">
+                        <td> <a href="/wiki/Category:Pok%C3%A9mon_with_a_gender_ratio_of_seven_males_to_one_female"
+                                title="Category:Pokémon with a gender ratio of seven males to one female"><span
+                                    style="color:#0000FF;">87.5% male</span><span style="color:#000;">,</span> <span
+                                    style="color:#FF6060;">12.5% female</span></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="roundy" style="background:#A7DB8D;"> <b><a href="/wiki/Catch_rate" title="Catch rate"><span
+                            style="color:#000;">Catch
+                            rate</span></a></b>
+                <table class="roundy" width="100%" style="background:#FFF; padding-top:0.6em; padding-bottom:0.6em;">
+                    <tr>
+                        <td> 45 <small>(<span class="explain"
+                                    title="When an ordinary Poké Ball is thrown at full health in Generation VII">11.9%</span>)</small>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        |> tr[4] => breedings (egg group, hatch time)
+        <tr>
+            <td class="roundy" colspan="2" style="background:#A7DB8D;"> <b><a href="/wiki/Pok%C3%A9mon_breeding"
+                        title="Pokémon breeding"><span style="color:#000;">Breeding</span></a></b>
+                <table width="100%" style="border-collapse:collapse;">
+
+                    <tr>
+                        <td width="50%"> <b><a href="/wiki/Egg_Group" title="Egg Group"><span style="color:#000;">Egg
+                                        Groups</span></a></b>
+                            <table class="roundy" width="100%" style="background:#fff;">
+                                <tr>
+                                    <td> <a href="/wiki/Monster_(Egg_Group)" title="Monster (Egg Group)"><span
+                                                style="color:#000;">Monster</span></a>&#160;and
+                                        <a href="/wiki/Grass_(Egg_Group)" title="Grass (Egg Group)"><span
+                                                style="color:#000;">Grass</span></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td> <b><a href="/wiki/Egg_cycle" title="Egg cycle"><span style="color:#000;">Hatch
+                                        time</span></a></b>
+                            <table class="roundy" width="100%" style="background:#fff;">
+                                <tr>
+                                    <td> 5140&#160;-&#160;5396&#160;<small>steps</small>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        |> tr[5] => height
+        <tr>
+            <td class="roundy" style="background:#A7DB8D;"> <b><a href="/wiki/List_of_Pok%C3%A9mon_by_height"
+                        title="List of Pokémon by height"><span style="color:#000;">Height</span></a></b>
+                <table class="roundy" width="100%" style="background:#FFF;">
+                    <tr>
+                        <td width="50%"> 2'04"
+                        </td>
+                        <td width="50%"> 0.7 m
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="2" style="line-height:8pt;"> <small>Bulbasaur</small>
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td width="50%"> 0'0"
+                        </td>
+                        <td width="50%"> 0 m
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="2" style="line-height:8pt;"> <small>{{{form2}}}</small>
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td width="50%"> 0'0"
+                        </td>
+                        <td width="50%"> 0 m
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="2" style="line-height:8pt;"> <small>{{{form3}}}</small>
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td width="50%"> 0'0"
+                        </td>
+                        <td width="50%"> 0 m
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="2" style="line-height:8pt;"> <small>{{{form4}}}</small>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="roundy" style="background:#A7DB8D;"> <b><a href="/wiki/Weight" title="Weight"><span
+                            style="color:#000;">Weight</span></a></b>
+                <table class="roundy" width="100%" style="background:#FFF;">
+                    <tr>
+                        <td width="50%"> 15.2 lbs.
+                        </td>
+                        <td width="50%"> 6.9 kg
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="2" style="line-height:8pt;"> <small>Bulbasaur</small>
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td width="50%"> 0 lbs.
+                        </td>
+                        <td width="50%"> 0 kg
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="2" style="line-height:8pt;"> <small>{{{form2}}}</small>
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td width="50%"> 0 lbs.
+                        </td>
+                        <td width="50%"> 0 kg
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="2" style="line-height:8pt;"> <small>{{{form3}}}</small>
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td width="50%"> 0 lbs.
+                        </td>
+                        <td width="50%"> 0 kg
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="2" style="line-height:8pt;"> <small>{{{form4}}}</small>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        |> tr[6] => megastone (if exists)
+        <tr style="display:none;">
+            <td class="roundy" colspan="2" style="background:#A7DB8D;"> <b><a href="/wiki/Mega_Stone"
+                        title="Mega Stone"><span style="color:#000;">Mega Stone</span></a></b>
+                <table class="roundy" width="100%" style="background:#FFF;">
+                    <tr>
+                        <td> <a href="/wiki/Mega_Stone" title="Mega Stone"><span style="color:#000;"></span></a>
+                        </td>
+                        <td style="display:none;" width="50%"><a href="/wiki/Mega_Stone" title="Mega Stone"><span
+                                    style="color:#000;"></span></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- |> tr[7] => lixo -->
+        <tr></tr>
+
+        |> tr[8] => EVS
+        <tr>
+            <td class="roundy" colspan="2" style="background:#A7DB8D;"> <b><a
+                        href="/wiki/List_of_Pok%C3%A9mon_by_effort_value_yield"
+                        title="List of Pokémon by effort value yield"><span style="color:#000;">EV yield</span></a></b>
+                <table class="roundy" width="100%" style="background:#FFF;">
+
+                    <tr>
+                        <td colspan="6"> Total: 1
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="6"> Bulbasaur
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="roundy" width="16%" style="background:#FF5959;">
+                            0<br /><small>HP</small>
+                        </td>
+                        <td class="roundy" width="17%" style="background:#F5AC78;">
+                            0<br /><small>Atk</small>
+                        </td>
+                        <td class="roundy" width="16%" style="background:#FAE078;">
+                            0<br /><small>Def</small>
+                        </td>
+                        <td class="roundy" width="17%" style="background:#9DB7F5;">
+                            1<br /><small>Sp.Atk</small>
+                        </td>
+                        <td class="roundy" width="17%" style="background:#A7DB8D;">
+                            0<br /><small>Sp.Def</small>
+                        </td>
+                        <td class="roundy" width="17%" style="background:#FA92B2;">
+                            0<br /><small>Speed</small>
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="6">
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td class="roundy" style="background:#FF5959;">
+                            0<br /><small>HP</small>
+                        </td>
+                        <td class="roundy" style="background:#F5AC78;">
+                            0<br /><small>Atk</small>
+                        </td>
+                        <td class="roundy" style="background:#FAE078;">
+                            0<br /><small>Def</small>
+                        </td>
+                        <td class="roundy" style="background:#9DB7F5;">
+                            0<br /><small>Sp.Atk</small>
+                        </td>
+                        <td class="roundy" style="background:#A7DB8D;">
+                            0<br /><small>Sp.Def</small>
+                        </td>
+                        <td class="roundy" style="background:#FA92B2;">
+                            0<br /><small>Speed</small>
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="6">
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td class="roundy" style="background:#FF5959;">
+                            0<br /><small>HP</small>
+                        </td>
+                        <td class="roundy" style="background:#F5AC78;">
+                            0<br /><small>Atk</small>
+                        </td>
+                        <td class="roundy" style="background:#FAE078;">
+                            0<br /><small>Def</small>
+                        </td>
+                        <td class="roundy" style="background:#9DB7F5;">
+                            0<br /><small>Sp.Atk</small>
+                        </td>
+                        <td class="roundy" style="background:#A7DB8D;">
+                            0<br /><small>Sp.Def</small>
+                        </td>
+                        <td class="roundy" style="background:#FA92B2;">
+                            0<br /><small>Speed</small>
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td colspan="6">
+                        </td>
+                    </tr>
+                    <tr style="display:none;">
+                        <td class="roundy" style="background:#FF5959;">
+                            0<br /><small>HP</small>
+                        </td>
+                        <td class="roundy" style="background:#F5AC78;">
+                            0<br /><small>Atk</small>
+                        </td>
+                        <td class="roundy" style="background:#FAE078;">
+                            0<br /><small>Def</small>
+                        </td>
+                        <td class="roundy" style="background:#9DB7F5;">
+                            0<br /><small>Sp.Atk</small>
+                        </td>
+                        <td class="roundy" style="background:#A7DB8D;">
+                            0<br /><small>Sp.Def</small>
+                        </td>
+                        <td class="roundy" style="background:#FA92B2;">
+                            0<br /><small>Speed</small>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- |> tr[9] => lixo -->
+        <tr></tr>
+
+        <!-- |> tr[10] => lixo -->
+        <tr></tr>
+
+        <!-- |> tr[11] => lixo -->
+        <tr></tr>
+
+    </table>
+</div>
