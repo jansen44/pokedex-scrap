@@ -30,7 +30,12 @@ def get_next_pokemon_link(poke_soup):
         return npl.find('a')['href']            
         
 def get_poke_info(poke_soup):
-    core = get_core_poke_info(poke_soup)
+    info_table = poke_soup                      \
+                    .find(id='mw-content-text') \
+                    .find_all('table', recursive=False)[1]
+
+    core  = get_core_poke_info(info_table)
+    types = get_poke_types(info_table)
     
     return {
         'core': {
@@ -39,21 +44,15 @@ def get_poke_info(poke_soup):
             'category':    core[2],
             'jp_name':     core[3],
             'jp_rom_name': core[4]
-        }
+        },
+        'types': types
     }
     
 # Name, category, index, jp/name
-def get_core_poke_info(poke_soup):
-    info_table = poke_soup                      \
-                    .find(id='mw-content-text') \
-                    .find_all('table', recursive=False)[1]
+def get_core_poke_info(info_table):
+    base_info_container = info_table.tr.td.table.tr
 
-    base_info_container = info_table.tr.td \
-                            .table.tr
-
-
-    info_container = base_info_container.td \
-                        .table.tr           \
+    info_container = base_info_container.td.table.tr      \
                         .find_all('td', recursive=False)
     
     return (
@@ -64,3 +63,10 @@ def get_core_poke_info(poke_soup):
         info_container[1].span.text,                                 # jp_name
         info_container[1].i.text                                     # jp_rom_name
     )
+
+def get_poke_types(info_table):
+    types = info_table.find_all('tr', recursive=False)[1]           \
+                        .table.find('td', attrs={'style': None})    \
+                        .find_all('a')
+    
+    return [t.text for t in types if t.text != 'Unknown']
