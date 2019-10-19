@@ -7,7 +7,7 @@ from urllib.parse import urlsplit, urlunsplit, quote
 from bs4 import BeautifulSoup as soup
 
 # Local
-from src.pokemon import get_poke_soup, get_next_pokemon_link, get_poke_info
+from src.pokemon import get_poke_soup, get_next_pokemon_link, get_poke_info, check_last_page
 from src.util import get_formatted_message, recreate_file
 
 if __name__ == '__main__':
@@ -33,5 +33,7 @@ if __name__ == '__main__':
                 break
             
             poke_soup = get_poke_soup(f'{BASE_URL}{next_pokemon_link}')
+            if check_last_page(poke_soup):
+                break
 
         print("\n\n########## FINISHED ##########\n\n")

@@ -15,6 +15,9 @@ def get_poke_soup(link):
     uCon.close()
     return soup(poke_page_html, 'html.parser')
 
+def check_last_page(poke_soup):
+    return poke_soup.find(id='mw-content-text').table.a['href'] == "/wiki/File:BulbaShadow.png"
+
 def get_next_pokemon_link(poke_soup):
     npl = poke_soup.find(id='mw-content-text').table
     try:
@@ -26,7 +29,6 @@ def get_next_pokemon_link(poke_soup):
     finally:
         return npl.find('a')['href']            
         
-
 def get_poke_info(poke_soup):
     core = get_core_poke_info(poke_soup)
     
@@ -40,7 +42,6 @@ def get_poke_info(poke_soup):
         }
     }
     
-
 # Name, category, index, jp/name
 def get_core_poke_info(poke_soup):
     info_table = poke_soup                      \
