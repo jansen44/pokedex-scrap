@@ -1,72 +1,51 @@
 
-import os
-
+# Built-in
 from urllib.request import urlopen as uOpen, Request as uReq
+
+# Third-party
 from bs4 import BeautifulSoup as soup
-from operator import itemgetter
+
+# Local
+from src.util import recreate_file
 
 def get_poke_soup(link):
-    uClient         = uReq(link, headers={"User-Agent": "Magic Browser"})
+    uClient         = uReq(link, headers={'User-Agent': 'Magic Browser'})
     uCon            = uOpen(uClient)
     poke_page_html  = uCon.read()
     uCon.close()
-    
-    poke_page_soup = soup(poke_page_html, "html.parser")
-    return poke_page_soup
-
-def get_formatted_message(poke_info):
-    return """
-########################################################################################
-# Index: %d
-# Name: %s / %s (%s)
-# Caregory: %s
-########################################################################################
-    """ % ( poke_info["index"],       \
-            poke_info["name"],        \
-            poke_info["jp_name"],     \
-            poke_info["jp_rom_name"], \
-            poke_info["category"] )
-
-def _get_formatted_message(poke_info):
-    return """
-########################################################################################
-# Index: %s
-# Name: %s
-########################################################################################
-    """ % ( poke_info["index"],       \
-            poke_info["name"],        \
-        )
+    return soup(poke_page_html, 'html.parser')
 
 def get_next_pokemon_link(poke_soup):
-    return poke_soup                                \
-            .find(id="mw-content-text").table       \
-            .findChildren("tr", recursive=False)[1] \
-            .findChildren("td", recursive=False)[2] \
-            .find("a")["href"]
+    npl = poke_soup.find(id='mw-content-text').table
+    try:
+        npl = npl.findChildren('tr', recursive=False)[1]    \
+                 .findChildren('td', recursive=False)[2]
+    except IndexError:
+        npl = npl.findChildren('tr', recursive=False)[0]    \
+                 .findChildren('td', recursive=False)[2]
+    finally:
+        return npl.find('a')['href']            
+        
 
 def get_poke_info(poke_soup):
-    core_info_getter = itemgetter("name", "category", "jp_name", "jp_rom_name", "index")
-
-    name,        \
-    category,    \
-    jp_name,     \
-    jp_rom_name, \
-    index = core_info_getter(get_core_poke_info(poke_soup))
+    core = get_core_poke_info(poke_soup)
     
     return {
-        "name":        name,
-        "category":    category,
-        "jp_name":     jp_name,
-        "jp_rom_name": jp_rom_name,
-        "index":       index
+        'core': {
+            'index':       core[0],
+            'name':        core[1],
+            'category':    core[2],
+            'jp_name':     core[3],
+            'jp_rom_name': core[4]
+        }
     }
     
 
 # Name, category, index, jp/name
 def get_core_poke_info(poke_soup):
     info_table = poke_soup                      \
-                    .find(id="mw-content-text") \
-                    .find_all("table", recursive=False)[1]
+                    .find(id='mw-content-text') \
+                    .find_all('table', recursive=False)[1]
 
     base_info_container = info_table.tr.td \
                             .table.tr
@@ -74,18 +53,13 @@ def get_core_poke_info(poke_soup):
 
     info_container = base_info_container.td \
                         .table.tr           \
-                        .find_all("td", recursive=False)
+                        .find_all('td', recursive=False)
     
-    poke_index  = base_info_container.th.find("a").text
-    name        = info_container[0].big.text
-    category    = info_container[0].a.text
-    jp_name     = info_container[1].span.text
-    jp_rom_name = info_container[1].i.text
+    return (
+        int(base_info_container.th.find('a').text.replace('#', '')), # index
 
-    return {
-        "name":        name,
-        "category":    category,
-        "jp_name":     jp_name,
-        "jp_rom_name": jp_rom_name,
-        "index":       int(poke_index.replace('#', ''))
-    }
+        info_container[0].big.text,                                  # name
+        info_container[0].a.text,                                    # category
+        info_container[1].span.text,                                 # jp_name
+        info_container[1].i.text                                     # jp_rom_name
+    )
