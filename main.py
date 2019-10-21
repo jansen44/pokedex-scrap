@@ -19,21 +19,22 @@ if __name__ == '__main__':
 
     with open(FILE_NAME, 'w') as f:
         next_pokemon_link = '/wiki/Bulbasaur_%28Pok%C3%A9mon%29'
-        poke_soup         = get_poke_soup(f'{BASE_URL}{next_pokemon_link}')
 
         while(True):
+            poke_soup = get_poke_soup(f'{BASE_URL}{next_pokemon_link}')
+            if check_last_page(poke_soup):
+                break
+            
             poke_info = get_poke_info(poke_soup)
             message   = get_formatted_message(poke_info)
 
-            f.write(message + '\n')
+            f.write(f'{next_pokemon_link}\n{message}\n')
+            print(next_pokemon_link)
             print(message)
 
             next_pokemon_link = get_next_pokemon_link(poke_soup)
             if (next_pokemon_link == END_URL):
                 break
-            
-            poke_soup = get_poke_soup(f'{BASE_URL}{next_pokemon_link}')
-            if check_last_page(poke_soup):
-                break
+ 
+    print("\n\n########## FINISHED ##########\n\n")
 
-        print("\n\n########## FINISHED ##########\n\n")
