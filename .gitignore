@@ -2,3 +2,4 @@ __pycache__/
 pokemon_list.txt
 a.html
 .DS_Store
+*.csv
